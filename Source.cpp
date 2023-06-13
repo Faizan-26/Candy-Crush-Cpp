@@ -824,7 +824,7 @@ int main()
 		cout << str << endl;
 		Sleep(500);
 		if (z == 6) {
-			system("start www.google.com");
+			system("start https://github.com/Faizan-26/Candy-Crush-C-Project-Fast");
 		}
 	}
 	SetConsoleTextAttribute(h, 15);
