@@ -742,6 +742,8 @@ int main()
 				cout << "\t\t\t\t |                            |" << endl;
 				cout << "\t\t\t\t |   Faizan Tariq   22F-3858  |" << endl;
 				cout << "\t\t\t\t |                            |" << endl;
+cout << "\t\t\t\t |   Wareesha Ashraf  22F-3441  |" << endl;
+				cout << "\t\t\t\t |                            |" << endl;
 				cout << "\t\t\t\t |                            |" << endl;
 				cout << "\t\t\t\t |   Press ESC to go back.    |" << endl;
 				cout << "\t\t\t\t |----------------------------|" << endl;
