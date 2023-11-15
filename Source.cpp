@@ -5,13 +5,7 @@
 #include<cstring>
 #include<string>
 #include<ctime>
-/// <summary>
-/// euishdcudsc
-/// 
-/// 
-/// 
-/// 
-/// </summary>
+
 using namespace std;
 #define KEY_UP 72
 #define KEY_DOWN 80
@@ -66,8 +60,8 @@ void fill(char arr[8][8]) // check if array element has space value and replace 
 					arr[x][y] == arr[x - 1][y + 1] && arr[x][y] == arr[x + 1][y - 1] || //forward diagonal
 					arr[x][y] == arr[x - 1][y - 1] && arr[x][y] == arr[x + 1][y + 1])  //backward diagonal
 				{
-					char c=' ';
-					arr[x][y]=crushrand(c);
+					char c = ' ';
+					arr[x][y] = crushrand(c);
 				}
 			}
 		}
@@ -96,7 +90,7 @@ void fillhard(char arr[10][10]) // check if array element has space value and re
 }
 void FILLcandies(char arr[8][8])// fill random cadies in table for 1st time easy mode
 {
-	char c=' ';
+	char c = ' ';
 	for (int i = 0; i < 8; i++)
 	{
 		for (int j = 0; j < 8; j++)
@@ -106,12 +100,12 @@ void FILLcandies(char arr[8][8])// fill random cadies in table for 1st time easy
 			{
 				for (int j = 0; j < 8; j++)
 				{
-					if ( arr[i][j] == arr[i][j + 1] && arr[i][j] == arr[i][j + 2] ||//column wise horizontal
+					if (arr[i][j] == arr[i][j + 1] && arr[i][j] == arr[i][j + 2] ||//column wise horizontal
 						arr[i][j] == arr[i + 1][j] && arr[i][j] == arr[i + 2][j] || // row wise vertical
 						arr[i][j] == arr[i - 1][j + 1] && arr[i][j] == arr[i + 1][j - 1] || //forward diagonal
 						arr[i][j] == arr[i - 1][j - 1] && arr[i][j] == arr[i + 1][j + 1])  //backward diagonal
 					{
-						char ch=' ';
+						char ch = ' ';
 						arr[i][j] = crushrand(ch);
 					}
 				}
@@ -121,12 +115,12 @@ void FILLcandies(char arr[8][8])// fill random cadies in table for 1st time easy
 }
 void FILLcandieshard(char arr[10][10])    // fill random cadies in table for 1st time hard mode
 {
-	char c=' ';
+	char c = ' ';
 	for (int i = 0; i < 10; i++)
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			
+
 			arr[i][j] = crushrandhard(c);
 			for (int i = 0; i < 10; i++)
 			{
@@ -137,7 +131,7 @@ void FILLcandieshard(char arr[10][10])    // fill random cadies in table for 1st
 						arr[i][j] == arr[i - 1][j + 1] && arr[i][j] == arr[i + 1][j - 1] || //forward diagonal
 						arr[i][j] == arr[i - 1][j - 1] && arr[i][j] == arr[i + 1][j + 1])  //backward diagonal
 					{
-						char ch=' ';
+						char ch = ' ';
 						arr[i][j] = crushrandhard(ch);
 					}
 				}
@@ -213,7 +207,7 @@ int main()
 			cout << "\t\t\t\t\t|         PLEASE ENTER YOUR NAME:          |" << endl;
 			cout << "\t\t\t\t\t          ";
 			cin.ignore();// without this control ignores user to input his name..
-			getline(cin,name); // gets input in string with spaces..
+			getline(cin, name); // gets input in string with spaces..
 			SetConsoleTextAttribute(h, 7);// white text color
 			int mode;
 			SetConsoleTextAttribute(h, 6);// yellow text color
@@ -250,7 +244,7 @@ int main()
 					cout << "    -------------------------------------------------" << endl;
 					for (int i = 0; i < 8; i++)
 					{
-						cout <<" "<<i<< " " << " | ";
+						cout << " " << i << " " << " | ";
 						for (int j = 0; j < 8; j++)
 						{
 							if (arr[i][j] == '@')
@@ -393,17 +387,17 @@ int main()
 									{
 										arr[i][j] = ' ';
 										arr[i + 1][j] = ' ';
-									    arr[i + 2][j] = ' ';
-									    score += 10;
-								     	system("CLS");
-								    	cout << "------------------------" << endl;
-								    	cout << "|                      |" << endl;
-								    	cout << "|         SWEET        |" << endl;
-								    	cout << "|   vert        loading|" << endl;
-								    	cout << "------------------------" << endl;
-								    	Sleep(500);
-								    	system("CLS");
-								    }
+										arr[i + 2][j] = ' ';
+										score += 10;
+										system("CLS");
+										cout << "------------------------" << endl;
+										cout << "|                      |" << endl;
+										cout << "|         SWEET        |" << endl;
+										cout << "|   vert        loading|" << endl;
+										cout << "------------------------" << endl;
+										Sleep(500);
+										system("CLS");
+									}
 									else if (arr[i][j] == arr[i][j + 1] && arr[i][j] == arr[i][j + 2])  // horizontal condition
 									{
 										arr[i][j] = ' ';
@@ -458,13 +452,12 @@ int main()
 							pikachuu--;
 						}
 					}
-					Sleep(50);
+					Sleep(1000);
 					system("CLS");
-
 				}
 				if (stoptimer <= 0 || turn <= 0)
 				{
-				
+
 					cout << name << " scored :" << score << endl;
 					fstream file;/// ifstream  fin..../// ofstream out  ... fout ... fin.>> 
 					file.open("SCOREBOARD.txt", ios::app); // fin.open//ios::in.
@@ -499,7 +492,7 @@ int main()
 					cout << "   -------------------------------------------------------------" << endl;
 					for (int i = 0; i < 10; i++)
 					{
-						cout << " "<<i<<" | ";
+						cout << " " << i << " | ";
 						for (int j = 0; j < 10; j++)
 						{
 							if (arr[i][j] == '@')
@@ -529,7 +522,7 @@ int main()
 					SetConsoleTextAttribute(h, 7);
 					if (GetAsyncKeyState(VK_RSHIFT))
 					{
-						int i=0, j=0;
+						int i = 0, j = 0;
 						bool found = 1;
 						bool valid = 1;
 						while (valid == 1)
@@ -731,7 +724,7 @@ int main()
 		{
 			system("CLS");
 			char b = ' ';
-			while (b==' ')
+			while (b == ' ')
 			{
 				if (GetAsyncKeyState(VK_ESCAPE))
 				{
@@ -742,7 +735,7 @@ int main()
 				cout << "\t\t\t\t |                            |" << endl;
 				cout << "\t\t\t\t |   Faizan Tariq   22F-3858  |" << endl;
 				cout << "\t\t\t\t |                            |" << endl;
-cout << "\t\t\t\t |   Wareesha Ashraf  22F-3441  |" << endl;
+				cout << "\t\t\t\t | Wareesha Ashraf  22F-3441  |" << endl;
 				cout << "\t\t\t\t |                            |" << endl;
 				cout << "\t\t\t\t |                            |" << endl;
 				cout << "\t\t\t\t |   Press ESC to go back.    |" << endl;
@@ -821,7 +814,7 @@ cout << "\t\t\t\t |   Wareesha Ashraf  22F-3441  |" << endl;
 	SetConsoleTextAttribute(h, 7);
 	for (int z = 1; z < 7; z++)
 	{
-		SetConsoleTextAttribute(h,z);
+		SetConsoleTextAttribute(h, z);
 		string str = "Happy Coding";
 		cout << str << endl;
 		Sleep(500);
